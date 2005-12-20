@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<!-- RDMI, with VOR needle, by Dave Culp -->
+
+<PropertyList>
+
+ <path>RDMI.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>face</object-name>
+  <object-name>RDMIneedle</object-name>
+  <object-name>pointer</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation> 
+
+
+ <!-- ************* Compass Card ***************** -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>face</object-name>
+  <property>orientation/heading-magnetic-deg</property>
+  <factor>-1</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>  
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RDMIneedle</object-name>
+  <property>orientation/heading-magnetic-deg</property>
+  <factor>-1</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>RDMIneedle</object-name>
+  <property>instrumentation/nav[0]/radials/actual-deg</property>
+  <factor>1</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation> 
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>
