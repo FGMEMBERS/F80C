@@ -7,7 +7,7 @@
   <engine>
    <name>engine</name>
    <mode>looped</mode>
-   <path>Aircraft/T38/Sounds/T38-engines.wav</path>
+   <path>Aircraft/F80C/Sounds/T38-engines.wav</path>
    <condition>
     <property>/engines/engine/run[0]</property>
    </condition>
