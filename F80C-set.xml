@@ -13,6 +13,7 @@ released under GPL
 
   <description>Lockheed F-80C Shooting Star</description>
   <author>David Culp (FDM), Massimo Taccoli, David Culp(3D)</author>
+  <status>production</status>
   <flight-model>jsb</flight-model>
   <aero>F80C</aero>
   
