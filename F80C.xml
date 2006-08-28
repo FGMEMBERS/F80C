@@ -39,7 +39,7 @@
     <metrics>
         <wingarea unit="FT2">  237    </wingarea>
         <wingspan unit="FT">    38.8  </wingspan>
-        <wing_incidence>         2.0  </wing_incidence>
+        <wing_incidence>         2.6  </wing_incidence>
         <chord unit="FT">        4.56 </chord>
         <htailarea unit="FT2">  35.37 </htailarea>
         <htailarm unit="FT">    13.80 </htailarm>
@@ -298,7 +298,7 @@
 
             <summer name="Rudder Sum">
                 <input>fcs/rudder-command-sum</input>
-                <input>fcs/yaw-sas-rate</input>
+                <input>fcs/yaw-damper-rate</input>
                 <clipto>
                     <min>-1</min>
                     <max>1</max>
@@ -513,11 +513,11 @@
                           <independentVar lookup="column">fcs/flap-pos-norm</independentVar>
                           <tableData>
                                         0       1
-                             -0.2000   -0.5710	0.1000
-                              0.0000	0.0000	0.6000
-                              0.2500	0.7160	1.3000
-                              0.3300	0.9450	0.3000
-                              0.6000	0.1740	0.0000
+                             -0.2000   -0.5710	0.4000
+                              0.0000	0.0000	0.9000
+                              0.2500	0.7160	1.6000
+                              0.3300	0.9450	0.6000
+                              0.6000	0.1740	0.3000
                           </tableData>
                       </table>
                 </product>
