@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+F-80C config file
+David Culp,  davidculp2@comcast.net
+released under GPL
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>Lockheed F-80C Shooting Star</description>
+  <author>David Culp (FDM), Massimo Taccoli, David Culp(3D)</author>
+  <status>production</status>
+  <flight-model>jsb</flight-model>
+  <aero>F80C</aero>
+  
+  <sound>
+   <path>Aircraft/F80C/Sounds/F80C-sound.xml</path>
+  </sound>
+
+  <submodels> 
+    <serviceable type="bool">true</serviceable>
+    <path>Aircraft/F80C/submodels.xml</path>
+  </submodels>
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+
+  <panel>
+    <visibility archive="y">false</visibility>
+  </panel>
+
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+    <pitch-offset-deg>-4.5</pitch-offset-deg>
+    <x-offset-m archive="y">0.0</x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">0.97</y-offset-m><!-- up/down -->
+    <z-offset-m archive="y">-0.80</z-offset-m><!-- aft/fore -->
+   </config>
+  </view>
+
+  <model>
+   <path>Aircraft/F80C/Models/f80.xml</path>
+  </model>
+
+  <chase-distance-m>-18</chase-distance-m>
+
+  <flaps>
+   <setting>0.000</setting>
+   <setting>0.500</setting> 
+   <setting>1.000</setting> 
+  </flaps>
+
+  <help>
+   <key>
+    <name>Shift-Q</name>
+    <desc>fuel cutoff switch or lever</desc>
+   </key>
+   <line> </line>
+   <line>Takeoff: half flaps, rotate at 120 kts.</line>
+   <line>Landing: full flaps, land at 120 kts.</line>
+   <line> </line>
+   <line>Clickable panel.  Hit Ctrl-C to see hot spots.</line>
+   <text>
+Original model by Massimo Taccoli, used with permission.  Adapted from the original MDL format to AC3D format, and 3D cockpit by David Culp.  Aerodynamics configuration for the JSBSim flight dynamics model is slightly modified from the AeroMatic output.  Released under the GPL, December 2005.  davidculp2@comcast.net
+
+The Lockheed P-80 was designed in 1943, the first project of the famous "Skunk Works", lead by Clarence "Kelly" Johnson.  The engine was a copy of Sir Frank Whittle's design, later license built by Allison as the J-33. The first XP-80 flew in early 1944, but saw no combat in WWII.  The airplane was re-designated the F-80 in 1948 when the new USAF was established.  Although the F-80 was 100 knots faster than the piston-engined fighters of its time, it was no match for the swept wing fighters like the MiG-15 and F-86 which first flew in 1947.  Because of this it was relegated to ground attack duties during the Korean War and suffered heavy losses from ground fire.  The trainer version, the T-33, was very successful, and several still fly in private hands.
+   </text>
+  </help>
+
+ </sim>
+
+ <controls>
+  <flight>
+   <flaps>0.5</flaps>
+  </flight>
+  <lighting>
+   <instruments-norm>0.3</instruments-norm>
+  </lighting>
+  <armament>
+   <gunsight>
+    <power-on type="bool">false</power-on>
+    <intensity type="double">0.3</intensity>
+   </gunsight>
+  </armament>
+ </controls>
+
+ <engines>
+  <engine n="0">
+    <running>true</running>
+  </engine>
+ </engines>
+
+<input>
+ <keyboard>
+
+ <key n="81">
+  <name>Shift-Q</name>
+  <desc>Fuel Cutoff Switch or Lever.</desc>
+  <binding>
+   <condition>
+    <property>/sim/input/selected/engine[0]</property>
+   </condition>
+   <command>property-toggle</command>
+   <property>/controls/engines/engine[0]/cutoff</property>
+  </binding>
+ </key>
+
+ </keyboard>
+</input>
+
+
+</PropertyList>
+

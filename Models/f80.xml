@@ -1,0 +1,562 @@
+<!-- A wrapper file for the F-80C 3D model -->
+
+<PropertyList>
+ <path>f80.ac</path>
+
+ <!-- Front Panel hotspots -->
+ <panel>
+  <path>Aircraft/F80C/Models/panel-hotspots.xml</path>
+  <bottom-left>
+   <x-m>-1.53</x-m>
+   <y-m>-0.30</y-m>
+   <z-m>0.51</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>-1.53</x-m>
+   <y-m> 0.30</y-m>
+   <z-m>0.51</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>-1.53</x-m>
+   <y-m>-0.30</y-m>
+   <z-m> 0.90</z-m>
+  </top-left>
+ </panel>
+
+<!-- ******************** instruments *******************-->
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/RDMI/RDMI.xml</path>
+  <offsets>
+   <x-m>-1.53</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.645</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/AI/AI.xml</path>
+  <offsets>
+   <x-m>-1.52</x-m>
+   <y-m>0.</y-m>
+   <z-m>0.745</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/n2/n2.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>0.24</y-m>
+   <z-m>0.64</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/AS/airspeed.xml</path>
+  <offsets>
+   <x-m>-1.53</x-m>
+   <y-m>-0.10</y-m>
+   <z-m>0.74</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/Alt/altimeter.xml</path>
+  <offsets>
+   <x-m>-1.53</x-m>
+   <y-m>0.10</y-m>
+   <z-m>0.735</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/IVSI/IVSI.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>0.10</y-m>
+   <z-m>0.64</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/Flaps/flaps.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>-0.175</y-m>
+   <z-m>0.675</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/Gear/gear.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>-0.24</y-m>
+   <z-m>0.69</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/PanelLights/lights.xml</path>
+  <offsets>
+   <x-m>-1.55</x-m>
+   <y-m>-0.18</y-m>
+   <z-m>0.73</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/Fuel/fuel.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>0.24</y-m>
+   <z-m>0.57</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/Gunsight/gunsight.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>0</y-m>
+   <z-m>0.82</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F80C/Models/Instruments/GMeter/gmeter.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>0.185</y-m>
+   <z-m>0.72</z-m>
+  </offsets>
+ </model>
+
+
+<!-- ******************** animations ********************-->
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Stick</object-name>
+  <property>controls/flight/elevator</property>
+  <interpolation>
+    <entry><ind>-1</ind><dep>-10</dep></entry>
+    <entry><ind>0</ind><dep>0</dep></entry>
+    <entry><ind>1</ind><dep>5.6</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-1.45</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.09</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Stick</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>10</factor>
+  <center>
+   <x-m>-1.45</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.09</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>NGear</object-name>
+  <object-name>NGearLDoor</object-name>
+  <object-name>NGearRDoor</object-name>
+  <condition>
+   <greater-than>
+    <property>gear/gear[0]/position-norm</property>
+    <value>0</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>NGearBrace</object-name>
+  <condition>
+   <greater-than>
+    <property>gear/gear[0]/position-norm</property>
+    <value>0.3</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>NGear</object-name>
+  <object-name>NGearBrace</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <factor>-90</factor>
+  <offset-deg>90</offset-deg>   
+  <center>
+   <x-m>-3.05</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.44</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>NGearLDoor</object-name>
+  <property>/gear/gear/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>90</dep></entry>
+    <entry><ind>0.1</ind><dep>0</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-2.39</x-m>
+   <y-m>-0.21</y-m>
+   <z-m>-0.7</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>NGearRDoor</object-name>
+  <property>/gear/gear/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>90</dep></entry>
+    <entry><ind>0.1</ind><dep>0</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-2.39</x-m>
+   <y-m>0.21</y-m>
+   <z-m>-0.7</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>LMainGear</object-name>
+  <object-name>LMainStrutDoor</object-name>
+  <object-name>LMainWheelDoor</object-name>
+  <object-name>LMainInnerDoor</object-name>
+  <condition>
+   <greater-than>
+    <property>gear/gear[1]/position-norm</property>
+    <value>0</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>LMainStrutBrace</object-name>
+  <condition>
+   <greater-than>
+    <property>gear/gear[1]/position-norm</property>
+    <value>0.9</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LMainGear</object-name>
+  <object-name>LMainStrutDoor</object-name>
+  <object-name>LMainWheelDoor</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>90</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0.47</x-m>
+   <y-m>-1.5</y-m>
+   <z-m>-0.42</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LMainInnerDoor</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>90</dep></entry>
+    <entry><ind>0.1</ind><dep>0</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0.385</x-m>
+   <y-m>-0.15</y-m>
+   <z-m>-0.17</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>select</type>
+  <object-name>RMainGear</object-name>
+  <object-name>RMainStrutDoor</object-name>
+  <object-name>RMainWheelDoor</object-name>
+  <object-name>RMainInnerDoor</object-name>
+  <condition>
+   <greater-than>
+    <property>gear/gear[2]/position-norm</property>
+    <value>0</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>RMainStrutBrace</object-name>
+  <condition>
+   <greater-than>
+    <property>gear/gear[2]/position-norm</property>
+    <value>0.9</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RMainGear</object-name>
+  <object-name>RMainStrutDoor</object-name>
+  <object-name>RMainWheelDoor</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>90</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0.47</x-m>
+   <y-m>1.50</y-m>
+   <z-m>-0.43</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RMainInnerDoor</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>90</dep></entry>
+    <entry><ind>0.1</ind><dep>0</dep></entry>
+    <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0.390</x-m>
+   <y-m>0.15</y-m>
+   <z-m>-0.17</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LElevator</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>15</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+   <x-m>5.47</x-m>
+   <y-m>-1.16</y-m>
+   <z-m>0.44</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RElevator</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>-15</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+   <x-m>5.47</x-m>
+   <y-m>1.16</y-m>
+   <z-m>0.44</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LAileron</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>15</factor>
+  <axis>
+     <x1-m>0.99</x1-m>
+     <y1-m>-5.57</y1-m>
+     <z1-m>-0.17</z1-m>
+     <x2-m>1.13</x2-m>
+     <y2-m>-3.22</y2-m>
+     <z2-m>-0.29</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RAileron</object-name>
+  <property>surface-positions/right-aileron-pos-norm</property>
+  <factor>-15</factor>
+  <axis>
+     <x1-m>0.99</x1-m>
+     <y1-m>5.56</y1-m>
+     <z1-m>-0.17</z1-m>
+     <x2-m>1.13</x2-m>
+     <y2-m>3.2</y2-m>
+     <z2-m>-0.29</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Rudder</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>15</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+   <x-m>5.65</x-m>
+   <y-m>0</y-m>
+   <z-m>1.39</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LFlap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>30</factor>
+  <axis>
+     <x1-m>1.12</x1-m>
+     <y1-m>-3.22</y1-m>
+     <z1-m>-0.29</z1-m>
+     <x2-m>1.26</x2-m>
+     <y2-m>-1.06</y2-m>
+     <z2-m>-0.37</z2-m>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>RFlap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>-30</factor>
+  <axis>
+     <x1-m>1.14</x1-m>
+     <y1-m>3.21</y1-m>
+     <z1-m>-0.28</z1-m>
+     <x2-m>1.26</x2-m>
+     <y2-m>1.06</y2-m>
+     <z2-m>-0.36</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LSpeedbrake</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>50</factor>
+  <axis>
+     <x1-m>-0.88</x1-m>
+     <y1-m>-0.345</y1-m>
+     <z1-m>-0.74</z1-m>
+     <x2-m>-0.88</x2-m>
+     <y2-m>0</y2-m>
+     <z2-m>-0.78</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RSpeedbrake</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>-50</factor>
+  <axis>
+     <x1-m>-0.88</x1-m>
+     <y1-m>0.345</y1-m>
+     <z1-m>-0.74</z1-m>
+     <x2-m>-0.88</x2-m>
+     <y2-m>0</y2-m>
+     <z2-m>-0.78</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Suppress Seat Model in Cockpit View -->
+ <animation>
+  <type>select</type>
+  <object-name>Seat</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>/sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+
+</PropertyList>
+ 

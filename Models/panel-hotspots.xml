@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+<PropertyList>
+
+ <name>F80 Panel Hotspots</name>
+ <background>Aircraft/F80C/Models/transparent-bg.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>0</y-offset>
+
+ <instruments>
+  <instrument>
+   <name>Hot Spot Map</name>
+   <x>512</x>
+   <y>384</y>
+   <w>1024</w>
+   <h>768</h>
+   <w-base>1024</w-base>
+   <h-base>1024</h-base>
+
+
+ <layers>
+  <layer>
+   <name>background</name>
+   <texture>
+
+<!--
+     <path>Aircraft/F80C/Models/hotspotgrid.rgb</path>
+-->
+     <path>Aircraft/F80C/Models/transparent-bg.rgb</path>
+
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>1.0</x2>
+     <y2>1.0</y2>
+   </texture>
+  </layer>
+ </layers>
+
+<!-- define hotspot actions below -->
+
+ <actions>
+
+  <!--  cockpit light dimmer hotspots -->
+  <action>
+   <name>panel brighter</name>
+   <button>0</button>
+   <x>-310</x>
+   <y>20</y>
+   <w>40</w>
+   <h>80</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls[0]/lighting[0]/instruments-norm</property>
+    <step>0.1</step>
+    <min>0</min>
+    <max>1</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>panel darker</name>
+   <button>0</button>
+   <x>-360</x>
+   <y>20</y>
+   <w>40</w>
+   <h>80</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/controls[0]/lighting[0]/instruments-norm</property>
+    <step>-0.1</step>
+    <min>0</min>
+    <max>1</max>
+    <wrap>0</wrap>
+   </binding>
+  </action>
+
+
+  <action>
+   <name>gunsight on</name>
+   <button>0</button>
+   <x>134</x>
+   <y>300</y>
+   <w>40</w>
+   <h>60</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/gunsight/power-on</property>
+    <value>true</value>
+   </binding>
+  </action>
+
+  <action>
+   <name>gunsight off</name>
+   <button>0</button>
+   <x>134</x>
+   <y>240</y>
+   <w>40</w>
+   <h>60</h>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/armament/gunsight/power-on</property>
+    <value>false</value>
+   </binding>
+  </action>
+
+ </actions>
+
+  </instrument>
+ </instruments>
+</PropertyList>
+
+
+
