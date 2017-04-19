@@ -16,6 +16,21 @@ released under GPL
   <status>production</status>
   <flight-model>jsb</flight-model>
   <aero>F80C</aero>
+
+  <tags>
+   <tag>fighter</tag>
+   <tag>lockheed</tag>
+   <tag>ww2</tag>
+   <tag>1940s</tag>   
+   <tag>1950s</tag>
+   <tag>1960s</tag>
+   <tag>1970s</tag>
+   <tag>1980s</tag>
+   <tag>1990s</tag>
+   <tag>retractable-gear</tag>
+   <tag>jet</tag>
+   <tag>single-engine</tag>
+  </tags>
   
   <sound>
    <path>Aircraft/F80C/Sounds/F80C-sound.xml</path>
