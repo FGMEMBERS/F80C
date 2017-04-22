@@ -18,15 +18,6 @@ released under GPL
   </long-description>
   <author>David Culp (FDM), Massimo Taccoli, David Culp(3D)</author>
   <status>production</status>
-  <tags>
-    <tag>fighter</tag>
-    <tag>lockheed</tag>
-    <tag>1940s</tag>
-    <tag>1950s</tag>
-    <tag>retractable-gear</tag>
-    <tag>single-engine</tag>
-    <tag>jet</tag>
-  </tags>
   <flight-model>jsb</flight-model>
   <aero>F80C</aero>
 
@@ -34,7 +25,7 @@ released under GPL
    <tag>fighter</tag>
    <tag>lockheed</tag>
    <tag>ww2</tag>
-   <tag>1940s</tag>   
+   <tag>1940s</tag>
    <tag>1950s</tag>
    <tag>1960s</tag>
    <tag>1970s</tag>
@@ -44,7 +35,7 @@ released under GPL
    <tag>jet</tag>
    <tag>single-engine</tag>
   </tags>
-  
+
   <sound>
    <path>Aircraft/F80C/Sounds/F80C-sound.xml</path>
   </sound>
