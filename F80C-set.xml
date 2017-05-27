@@ -12,16 +12,33 @@ released under GPL
  <sim>
 
   <description>Lockheed F-80C Shooting Star</description>
+  <long-description>The Lockheed P-80 Shooting Star was the first jet fighter
+    used operationally by the USAAF.  Designed with straight wings, the F-80
+    saw extensive combat in the Korean war.
+  </long-description>
   <author>David Culp (FDM), Massimo Taccoli, David Culp(3D)</author>
   <status>production</status>
   <flight-model>jsb</flight-model>
   <aero>F80C</aero>
-  
+
+  <tags>
+   <tag>fighter</tag>
+   <tag>lockheed</tag>
+   <tag>ww2</tag>
+   <tag>1940s</tag>
+   <tag>1950s</tag>
+   <tag>1960s</tag>
+   <tag>1970s</tag>
+   <tag>retractable-gear</tag>
+   <tag>jet</tag>
+   <tag>single-engine</tag>
+  </tags>
+
   <sound>
    <path>Aircraft/F80C/Sounds/F80C-sound.xml</path>
   </sound>
 
-  <submodels> 
+  <submodels>
     <serviceable type="bool">true</serviceable>
     <path>Aircraft/F80C/submodels.xml</path>
   </submodels>
@@ -51,8 +68,8 @@ released under GPL
 
   <flaps>
    <setting>0.000</setting>
-   <setting>0.500</setting> 
-   <setting>1.000</setting> 
+   <setting>0.500</setting>
+   <setting>1.000</setting>
   </flaps>
 
   <help>
@@ -115,4 +132,3 @@ The Lockheed P-80 was designed in 1943, the first project of the famous "Skunk W
 
 
 </PropertyList>
-
